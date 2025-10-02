@@ -1,0 +1,47 @@
+body {
+    margin: 0px;
+    font-family: Arial;
+}
+
+header {
+    background-color: beige;
+    height: 80px;
+}
+
+nav {
+    background-color: rgb(127, 136, 255);
+    width: 25%;
+}
+
+section {
+    background-color: rgb(127, 168, 255);
+    width: 75%;
+    text-align: justify;
+}
+
+footer {
+    background-color: rgb(213, 224, 186);
+    height: 50px;
+    clear: left;
+}
+
+nav,
+section {
+    float: left;
+    height: calc(100vh - 130px);
+}
+
+p {
+    padding: 20px;
+}
+
+h1 {
+    margin: 0px;
+    text-align: center;
+    line-height: 80px;
+}
+
+li {
+    list-style: none;
+    padding-left: 5px;
+}

@@ -1,0 +1,21 @@
+.tamanio{
+    height: 60px;
+    width: 100;
+}
+#caja1{
+    background-color: brown;
+    height: 1600px;
+
+}
+#caja2{
+    background-color: rgb(42, 165, 52);
+    float: left;
+}
+#caja3{
+    background-color: rgb(128, 165, 42);
+     float: left;
+}
+#caja4{
+    background-color: rgb(165, 147, 42);
+     float: left;
+}

@@ -1,0 +1,19 @@
+.tamanio{
+    height: 60px;
+    width: 100;
+}
+#caja1{
+    background-color: brown;
+}
+#caja2{
+    background-color: rgb(42, 165, 52);
+}
+#caja3{
+    background-color: rgb(128, 165, 42);
+    position: relative;
+    top: -60;
+    left: 100px;
+}
+#caja4{
+    background-color: rgb(165, 147, 42);
+}
