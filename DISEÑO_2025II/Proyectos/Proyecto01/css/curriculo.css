@@ -1,0 +1,41 @@
+body{
+    margin: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#perfril{
+    color: rgb(148, 189, 136);
+}
+#expercial{
+    color: rgb(148, 189, 136);
+}
+#habilidades{
+    color: rgb(148, 189, 136);
+}
+#otras_cosas{
+    color: rgb(148, 189, 136);
+}
+#yo_gaby{
+    width: 500px;
+    float: right;
+    margin: 0px;
+    width: 190px; 
+    border: 1px black
+}
+#ex_pro {
+
+    background-color: rgb(221, 200, 233);
+    width: 20%;
+}
+#otras_cs{
+    background-color: rgb(221, 200, 233);
+    width: 25%;
+}
+#relleno{
+    background-color: rgb(209, 209, 209);
+    width: 25%;
+}
+#relleno_2{
+     background-color: rgb(209, 209, 209);
+    width: 25%;
+}

@@ -1,0 +1,118 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    margin: 40px;
+    color: #333;
+}
+
+
+#bcp_imagen{
+    width: 120px;
+    display: block;
+    margin-bottom: 5px;
+
+}
+#rud{
+   text-align: center;
+    margin-top: -100px;
+    float: right;
+}
+div p {
+    font-size: 13px;
+    color: #444;
+    line-height: 1.3;
+    margin: 0;
+}
+
+#rud fieldset {
+    border: 2px solid #004481;
+    border-radius: 8px;
+    padding: 10px 25px;
+    background: linear-gradient(180deg, #fefefe 0%, #f4f8fb 100%);
+}
+#rud h2 {
+    color: #004481;
+    margin: 5px;
+    font-weight: 700;
+}
+
+#rud h3 {
+    color: #ff6600;
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background: #004481;
+    color: #fff;
+}
+
+thead th {
+    padding: 8px;
+    font-weight: 600;
+    border: none;
+}
+
+tbody th, 
+tbody td {
+    border: 1px solid #d1d1d1;
+    padding: 6px 8px;
+}
+
+tbody th {
+    background-color: #f7f9fc;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9fbfd;
+}
+
+
+tbody tr th[colspan="8"],
+tbody tr th[colspan="7"] {
+    background-color: #004481;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 8px;
+}
+
+
+td {
+    text-align: left;
+}
+
+td:last-child {
+    text-align: right;
+    font-weight: 600;
+}
+
+tbody td[style*="text-align: right; border-style: none;"] {
+    color: #004481;
+    font-weight: 700;
+}
+
+
+tfoot td {
+    background-color: #f4f4f4;
+    color: #555;
+    text-align: right;
+    padding: 8px;
+    border-top: 2px solid #004481;
+}
+
+
+em {
+    font-style: italic;
+    color: #e01818;
+}

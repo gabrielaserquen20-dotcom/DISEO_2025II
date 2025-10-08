@@ -1,0 +1,49 @@
+body{
+    font-family: Arial;
+}
+
+header{
+    background-color: brown;
+    text-align: center;
+    height: 100px;
+    line-height: 100PX;
+}
+main{
+    display: grid;
+    min-height: 74vh;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 100%;
+    grid-template-areas: "my-nav my-section my-aside";
+}
+nav{
+    background-color: rgb(209, 104, 104);
+    grid-area: my-nav;
+
+}
+section{
+    background-color: rgb(233, 190, 190);
+    grid-area: my-section;
+}
+aside{
+    background-color: brown;
+    grid-area: my-aside;
+
+}
+ footer{
+    margin: Opx;
+  background-color: rgb(78, 21, 21);
+    color: white;
+    text-align: center;
+    line-height: 60px;
+ }
+ 
+ li{
+    list-style: none;
+ }
+  
+ a{
+    text-decoration: nome;
+    color: blue;
+ }
+
+

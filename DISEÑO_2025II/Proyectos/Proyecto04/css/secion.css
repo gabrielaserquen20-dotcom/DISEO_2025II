@@ -1,0 +1,153 @@
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    width: 800px;
+    height: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    position: relative;
+}
+
+
+.left-panel {
+    background-image: url("../img/fondo_bienvenidos.png");
+    background-size: cover; 
+    background-position: center;
+    color: rgba(61, 2, 2, 0.952);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+}
+.left-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35%; /* Must match the grid column width */
+    height: 500px; /* Must match the container height */
+    background-color: rgba(0, 0, 0, 0.2); /* Black with 20% opacity */
+    z-index: 1; /* Keep it below the text */
+}
+
+.left-panel h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.left-panel p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.btn-login {
+    background-color: #b4c5af;
+    color: #333;
+    border: 1px solid #c9c3c3;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #e4c3c3;
+}
+
+.right-panel {
+    padding: 40px;
+    text-align: center;
+}
+
+.right-panel h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.btn-social {
+    background-color: #e9b1b1;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.separator {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+
+.registration-form {
+    display: grid;
+   
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px; 
+    max-width: 350px; 
+    margin: 0 auto;
+    text-align: left;
+}
+
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"] {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+
+.input-full {
+    grid-column: 1 / -1; 
+}
+
+
+.terms {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.terms input[type="checkbox"] {
+    margin-right: 5px;
+    accent-color: #666;
+}
+
+.terms label {
+    color: #333;
+}

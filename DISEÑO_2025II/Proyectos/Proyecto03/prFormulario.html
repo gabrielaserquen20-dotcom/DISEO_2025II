@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/formulario_icono1.png">
+    <link rel="stylesheet" href="css/formulario.css">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <header>
+        <h1>Formulario de Rescerva Vacante </h1>
+    </header>
+    <main>
+        <form id="formulari_pr" name="formulario_de_proyectos" action="Formulario.html">
+            <fieldset id="Datos Personales ">
+                <legend>DATOS PERSONALES </legend>
+
+                <label for="nombre">Nombre : </label>
+                <input type="text" name="nombre" id="nombre"><br>
+                <label for="apellido">Apellido : </label>
+                <input type="text" name="apellido" id="apellido"><br>
+                <label for="dni">DNI :</label>
+                <input type="text" name="dni" maxlength="9"><br>
+                <label for="dirección">Dirección : </label>
+                <input type="text" name="dirección" id="dirección"><br>
+                <label for="correo">Email :</label>
+                <input type="email" name="correo" id="correo"> <br>
+
+
+                <label for="f_nacimiento">Fecha de Nacimiento : </label>
+                <input type="date" id="start" name="trip-start" value="0000-00-00" min="2018-01-01"
+                    max="2080-12-31" /><br>
+
+                <label for="universidad">Departamento: </label>
+                <select name="universidad" id="universidad">
+                    <option value="x"> ... </option>
+                    <option value="a">Tumbes</option>
+                    <option value="b">Piura</option>
+                    <option value="c">Lambayeque </option>
+                    <option value="d">La Libertad</option>
+                    <option value="e">Áncash</option>
+                    <option value="f"> Lima</option>
+                    <option value="g"> Ica </option>
+                    <option value="h"> Arequipa </option>
+                    <option value="h"> Moquegua </option>
+                    <option value="h"> Tacna </option>
+                </select>
+            </fieldset>
+            <br>
+            <fieldset id="sexo_id ">
+                <legend>Sexo</legend>
+                <input type="radio" name="masculino">
+                <p>Masculino</p><br>
+                <input type="radio" name="femenino">
+                <p>Femenino</p>
+            </fieldset>
+            <br>
+            <br>
+            <fieldset id="facultad_id ">
+                <legend>Facultad</legend>
+                <input type="radio" name="Ingenieria">
+                <p>Ingenieria</p><br>
+                <input type="radio" name="Derecho">
+                <p>Derecho</p><br>
+                <input type="radio" name="Medicina">
+                <p>Medicina</p><br>
+                <input type="radio" name="Humanidades">
+                <p>Humanidades</p><br>
+                <input type="radio" name="Empresariales">
+                <p>Empresariales</p>
+            </fieldset>
+            <br>
+            <fieldset id="cursos_id ">
+                <legend>Cursos</legend>
+                <input type="checkbox" name="Inteligenca Artifical">
+                <p>Inteligenca Artifical</p><br>
+                <input type="checkbox" name="Business Inteligencia">
+                <p>Business Inteligencia</p><br>
+                <input type="checkbox" name="Ciencia de datos">
+                <p>Ciencia de datos</p><br>
+                <input type="checkbox" name="Cyberseguridad">
+                <p>Cyberseguridad</p><br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Comentario</legend>
+                <textarea name="observacion1" id="observacion1" rows="7" cols="90"></textarea>
+            </fieldset>
+            <br>
+            <div id="botones">
+                <input type="reset" class="btn" value="Nuevo">
+                <input type="submit" class="btn" value="Enviar">
+            </div>
+
+
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
