@@ -1,5 +1,6 @@
+/* Guarda este archivo como css/estilos.css */
 body {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,9 +10,11 @@ body {
     background-color: #f0f0f0;
 }
 
-.container {
+/* === CONTENEDOR PRINCIPAL CON GRID === */
+.contenedor {
     display: grid;
-    grid-template-columns: 35% 65%;
+    /* Define la estructura de 35% y 65% */
+    grid-template-columns: 35% 65%; 
     width: 800px;
     height: 500px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -19,43 +22,59 @@ body {
     position: relative;
 }
 
-
-.left-panel {
+/* === PANEL IZQUIERDO (BIENVENIDA) === */
+.panel-izquierdo {
+    /* Asumo que la imagen "fondo_bienvenidos.png" está en la ruta correcta */
     background-image: url("../img/fondo_bienvenidos.png");
     background-size: cover; 
     background-position: center;
-    color: rgba(61, 2, 2, 0.952);
+    
+    /* Color de texto ajustado para el fondo de imagen */
+    color: white; /* Cambiado a blanco para mejor contraste sobre la imagen */
+    
     padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center; 
     text-align: center;
+    position: relative; /* Necesario para que el contenido esté sobre el pseudoelemento */
+    z-index: 2;
 }
-.left-panel::before {
+
+/* Overlay semi-transparente para mejorar la legibilidad del texto */
+.panel-izquierdo::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 35%; /* Must match the grid column width */
-    height: 500px; /* Must match the container height */
-    background-color: rgba(0, 0, 0, 0.2); /* Black with 20% opacity */
-    z-index: 1; /* Keep it below the text */
+    /* Ajusta el ancho para que coincida con el 35% del panel izquierdo */
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay oscuro (ajustado de 0.2 a 0.4) */
+    z-index: -1; /* Mantiene el overlay detrás del contenido del panel */
 }
 
-.left-panel h1 {
+
+.panel-izquierdo h1,
+.panel-izquierdo p,
+.btn-iniciar-sesion {
+    z-index: 3; /* Asegura que el contenido esté sobre el overlay */
+}
+
+.panel-izquierdo h1 {
     font-size: 30px;
     margin-bottom: 20px;
     font-weight: bold;
 }
 
-.left-panel p {
+.panel-izquierdo p {
     font-size: 14px;
     margin-bottom: 30px;
     line-height: 1.5;
 }
 
-.btn-login {
+.btn-iniciar-sesion {
     background-color: #b4c5af;
     color: #333;
     border: 1px solid #c9c3c3;
@@ -67,24 +86,25 @@ body {
     transition: background-color 0.3s;
 }
 
-.btn-login:hover {
+.btn-iniciar-sesion:hover {
     background-color: #e4c3c3;
 }
 
-.right-panel {
+/* === PANEL DERECHO (REGISTRO) === */
+.panel-derecho {
     padding: 40px;
     text-align: center;
 }
 
-.right-panel h2 {
+.panel-derecho h2 {
     font-size: 24px;
     margin-bottom: 30px;
     font-weight: bold;
     color: #333;
 }
 
-
-.social-login {
+/* === INICIO SOCIAL === */
+.inicio-social {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -100,16 +120,16 @@ body {
     font-size: 12px;
 }
 
-.separator {
+.separador {
     font-size: 12px;
     color: #666;
     margin-bottom: 20px;
 }
 
-
-.registration-form {
+/* === FORMULARIO DE REGISTRO CON GRID === */
+.formulario-registro {
     display: grid;
-   
+    /* Define dos columnas de igual tamaño para Nombres y Apellidos */
     grid-template-columns: 1fr 1fr; 
     gap: 10px; 
     max-width: 350px; 
@@ -117,10 +137,10 @@ body {
     text-align: left;
 }
 
-
-.registration-form input[type="text"],
-.registration-form input[type="email"],
-.registration-form input[type="password"] {
+/* Estilo general para todos los inputs */
+.formulario-registro input[type="text"],
+.formulario-registro input[type="email"],
+.formulario-registro input[type="password"] {
     padding: 8px 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -129,13 +149,13 @@ body {
     box-sizing: border-box;
 }
 
-
-.input-full {
-    grid-column: 1 / -1; 
+/* Campos de ancho completo (e-mail, contraseña, etc.) */
+.input-completo {
+    grid-column: 1 / -1; /* Hace que el input ocupe el ancho de ambas columnas */
 }
 
-
-.terms {
+/* === TÉRMINOS Y CONDICIONES === */
+.terminos {
     grid-column: 1 / -1;
     display: flex;
     align-items: center;
@@ -143,11 +163,25 @@ body {
     margin-top: 5px;
 }
 
-.terms input[type="checkbox"] {
+.terminos input[type="checkbox"] {
     margin-right: 5px;
     accent-color: #666;
 }
 
-.terms label {
+.terminos label {
     color: #333;
+}
+
+/* === BOTÓN ENVIAR === */
+.btn-enviar {
+    grid-column: 1 / -1;
+    justify-self: center; /* Centra el botón dentro de su columna (que es todo el ancho) */
+    background-color: #d89696;
+    color: white;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
 }
